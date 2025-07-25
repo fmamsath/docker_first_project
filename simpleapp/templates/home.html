@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - DevOps SimpleApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 60px;
+            font-size: 2.5em;
+            color: #58a6ff;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f0f6fc;
+            background-color: #21262d;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #30363d;
+            color: #58a6ff;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Welcome to DevOps SimpleApp</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'about' %}">👨‍💻 About Me</a></li>
+            <li><a href="/admin/">🛠️ Admin Dashboard</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>Made with 💙 by Mohamed Amsath | DevOps Journey</p>
+    </footer>
+</body>
+</html>
