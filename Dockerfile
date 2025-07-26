@@ -1,18 +1,12 @@
-
 FROM ubuntu
-
 
 WORKDIR /app
 
+COPY . /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
+    pip install -r requirements.txt 
 
-# Copy project files
-COPY . .
-
-# Expose Django’s default port
-EXPOSE 8000
-
-# Run Django dev server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python3"]
+CMD ["manage.py", "runserver", "0.0.0.0:8000"]
