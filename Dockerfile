@@ -5,8 +5,8 @@ FROM python:3.11-slim
 WORKDIR /app
 
 
-COPY requirments.txt .
-RUN pip install --no-cache-dir -r requirments.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
 COPY . .
